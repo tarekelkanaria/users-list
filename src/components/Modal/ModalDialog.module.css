@@ -1,12 +1,3 @@
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100vh;
-  background: rgba(29, 28, 28, 0.8);
-}
 .modal__wrapper {
   position: fixed;
   top: 50%;

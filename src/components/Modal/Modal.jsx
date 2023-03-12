@@ -1,9 +1,11 @@
-import classes from "./Modal.module.css";
-import Button from "../UI/Button/Button";
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
+import Overlay from "./Overlay";
+import ModalDialog from "./ModalDialog";
 
 const Modal = ({ user, close }) => {
   const [message, setMessage] = useState({ title: "", text: "" });
+
   const inputValidation = (userInput) => {
     if (!userInput.nameExist && !userInput.ageExist)
       setMessage({
@@ -36,20 +38,20 @@ const Modal = ({ user, close }) => {
   };
 
   return (
-    <section>
-      <div className={classes.overlay} onClick={handleClose}></div>
-      <article className={classes["modal__wrapper"]}>
-        <header className={classes["modal__title"]}>
-          <h2>{message.title}</h2>
-        </header>
-        <div className={classes["modal__body"]}>
-          <p>{message.text}</p>
-        </div>
-        <footer className={classes["modal__footer"]}>
-          <Button onClick={handleClose}>Okay</Button>
-        </footer>
-      </article>
-    </section>
+    <>
+      {createPortal(
+        <Overlay handleClose={handleClose} />,
+        document.getElementById("overlay-root")
+      )}
+      {createPortal(
+        <ModalDialog
+          title={message.title}
+          text={message.text}
+          handleClose={handleClose}
+        />,
+        document.getElementById("modal-root")
+      )}
+    </>
   );
 };
 export default Modal;

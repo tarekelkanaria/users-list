@@ -21,6 +21,7 @@ Runs the app in the development mode on your localhost.
 - JavaScript
 - ReactJS
 - React + vite for creation
+- React-dom
 - React-hooks
 - React-icons
 - styled-components
