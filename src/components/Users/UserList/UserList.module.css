@@ -1,0 +1,28 @@
+.user-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-inline: 0.5rem;
+  list-style: none;
+  margin: 0;
+}
+.user-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #ccc;
+  text-align: left;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.user-list__remove {
+  display: block;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}

@@ -1,0 +1,26 @@
+.user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.user-form__feild {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.8rem;
+  padding-inline: 1rem;
+}
+.user-form__feild label {
+  text-align: left;
+  font-weight: bold;
+}
+.user-form__feild input {
+  height: 2rem;
+  padding-block: 0.2rem;
+  border: 3px solid #ccc;
+  outline: none;
+}
+.user-form__submit {
+  text-align: left;
+  padding-inline: 1rem;
+}
