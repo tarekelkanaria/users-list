@@ -17,7 +17,9 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem("usersList", JSON.stringify(userListData));
+    if (!userListData.length) localStorage.removeItem("usersList");
   }, [userListData]);
+
   const updateUserList = (user) => {
     setUserListData((prevUserList) => [user, ...prevUserList]);
   };
