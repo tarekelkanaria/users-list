@@ -7,12 +7,12 @@ const Button = styled.button`
   padding: 1rem 2rem;
   border: 1px solid #4f005f;
   cursor: pointer;
-};
+}
 @media (max-width: 767px) {
   & {
     width: 100%;
-  };
-};
+  }
+}
 &:hover,
 &:active {
   background: #741188;
