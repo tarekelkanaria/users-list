@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import UserForm from "./components/Users/UserForm/UserForm";
 import UserList from "./components/Users/UserList/UserList";
-import Modal from "./components/modal/Modal";
+import Modal from "./components/Modal/Modal";
 import "./App.css";
 
 function App() {
